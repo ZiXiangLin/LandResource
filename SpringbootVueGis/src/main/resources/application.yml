@@ -1,0 +1,24 @@
+c3p0:
+  acquireIncrement: 3
+  acquireRetryAttempts: 30
+  acquireRetryDelay: 1000
+  breakAfterAcquireFailure: false
+  driverClass: com.mysql.cj.jdbc.Driver
+  idleConnectionTestPeriod: 60
+  initialPoolSize: 3
+  jdbcUrl: jdbc:mysql://localhost:3306/infosystem?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=true
+  maxIdleTime: 1800000
+  maxPoolSize: 10
+  maxStatements: 1000
+  minPoolSize: 2
+  password: password
+  testConnectionOnCheckout: false
+  user: root
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.gis.demo.domain
+server:
+  port: 8443
+  connection-timeout: 18000000

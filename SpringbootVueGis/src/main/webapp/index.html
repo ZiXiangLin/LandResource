@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="static/icon.ico" />
+    <title>国土资源与生态环境安全应急响应平台</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.14/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.14/"></script>
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+
+    <style type="text/css">
+          #Loading {
+           top:50%;
+           left:50%;
+           position: absolute;
+           -webkit-transform: translateY(-50%) translateX(-50%);
+           transform: translateY(-50%) translateX(-50%);
+           z-index:100;
+          }
+          @-webkit-keyframes ball-beat {
+           50% {
+            opacity: 0.2;
+            -webkit-transform: scale(0.75);
+            transform: scale(0.75); }
+
+           100% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+          @keyframes ball-beat {
+           50% {
+            opacity: 0.2;
+            -webkit-transform: scale(0.75);
+            transform: scale(0.75); }
+
+           100% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+          .ball-beat > div {
+           background-color: #279fcf;
+           width: 15px;
+           height: 15px;
+           border-radius: 100% !important;
+           margin: 2px;
+           -webkit-animation-fill-mode: both;
+           animation-fill-mode: both;
+           display: inline-block;
+           -webkit-animation: ball-beat 0.7s 0s infinite linear;
+           animation: ball-beat 0.7s 0s infinite linear; }
+          .ball-beat > div:nth-child(2n-1) {
+           -webkit-animation-delay: 0.35s !important;
+           animation-delay: 0.35s !important; }
+         </style>
+
+  </head>
+  <body>
+    <div id="Loading">
+          <div id="load" class="loader-inner ball-beat">
+           <div></div>
+           <div></div>
+           <div></div>
+          </div>
+         </div>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+
+<script>
+  window.onload=function(){
+  document.getElementById("load").classList.remove("loader-inner")
+  document.getElementById("load").classList.remove("ball-beat")
+}
+
+</script>
